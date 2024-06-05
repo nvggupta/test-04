@@ -1,0 +1,127 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+.main
+{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(224, 224, 244);
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 60%;
+    height: 20%;
+}
+#sign-up
+{
+    padding: 10px;
+    background-color: blue;
+    border-radius: 5px;
+    font-size: small;
+    cursor: pointer;
+    color: azure;
+    font-weight: bold;
+}
+h1,p{
+    margin-top: 30px;
+    text-align: center;
+    word-wrap: break-word;
+}
+#buy 
+{
+    margin-left: 50%;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: blue;
+    border-radius: 5px;
+    font-size: small;
+    cursor: pointer;
+    color: azure;
+    font-weight: bold;
+    width: 80px;
+    text-align: center;
+}
+#img-sec{
+    margin-left: 15%;
+}
+@media (max-width:480px) {
+    #img-sec{
+        display: flex;
+        flex-direction: column;
+    }
+}
+#section-1
+{
+    margin-top: 400px;
+    height: 100vh;
+    width: 100vw;
+   
+}
+.search-sec{
+    margin-left: 38%;
+    margin-top: 3%;
+    width: fit-content;
+}
+.input{
+    border-radius: 5px;
+    padding: 10px;
+    width: 250px;
+}
+.search{
+    padding: 10px;
+    margin-left: 10px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: blue;
+    color: aliceblue  ;
+    cursor: pointer;
+}
+.product{
+    margin-top: 50px;
+    padding: 20px;
+    display: flex;
+     flex-wrap: wrap;
+     gap: 30px;
+     justify-content: center;
+   
+}
+.card{
+    width: 30%;
+    height: 450px;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 10px 10px 5px rgb(243, 229, 229);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.card-Search{
+    
+    margin-top: 20px;
+    width: 40%;
+}
+.details-card{
+    overflow: scroll;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    position: relative;
+    transform: translate(50% , -50%);
+    z-index: 1;
+    border: 1px solid red;
+    height: 50vh;
+    width: 40vw;
+}
