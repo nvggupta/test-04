@@ -131,11 +131,12 @@ h1,p{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    background-color: #5edbcf;
+    position: fixed;
+    top: 10%;
+    left: 40%;
+    background-color: #b2e0db;
     display: none;
+    opacity: 1;
   }
   
   .details-card img {
@@ -144,7 +145,7 @@ h1,p{
   }
   .details-card img{
     margin-top: 5%;
-    margin-left: 35%;
+    margin-left: 30%;
   }
   p  {
     text-align: center;
@@ -153,6 +154,13 @@ h1,p{
     overflow-wrap: break-word;
     max-width: 90%; 
     margin: 10px 0; 
+    margin-left: 20px;
+  }
+  #close
+  {
+        margin-right: 50%;
+        background-color: black;
+        margin-bottom: 25px;
   }
 .footer{
     display: flex;
