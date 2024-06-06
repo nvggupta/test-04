@@ -1,7 +1,8 @@
 const input = document.getElementById("input");
 const product = document.getElementById("product");
 const detailsCard = document.getElementById("details-card");
-
+const section1 = document.getElementById("section-1");
+const body = document.getElementById("body");
 async function details(input) {
     try {
         let res = await fetch(`https://openapi.programming-hero.com/api/phone/${input}`);
@@ -18,9 +19,9 @@ async function details(input) {
         const chipset = document.getElementById("chipSet");
         const memory = document.getElementById("memory");
         const sensors = document.getElementById("sensors");
-
+        body.style.overflowY= "hidden";
         detailsCard.style.display = "block";
-
+        
         img.setAttribute("src", `${data.data.image}`);
         phone_name.innerHTML = data.data.brand;
         model.innerHTML = data.data.name;
@@ -29,7 +30,9 @@ async function details(input) {
         memory.innerHTML = data.data.mainFeatures.memory;
         sensors.innerHTML = data.data.mainFeatures.sensors.join(', ');
 
-        document.getElementById("close").addEventListener('click', () => {
+        document.getElementById("close").addEventListener('click', () => 
+            {
+                body.style.overflowY= "scroll";
             detailsCard.style.display = "none";
         });
     } catch (error) {
@@ -55,6 +58,7 @@ async function searching(inputs) {
         const cardSearch = document.querySelectorAll(".card-Search");
         cardSearch.forEach(card => {
             card.addEventListener('click', () => {
+                
                 let slug = card.previousElementSibling.textContent.trim();
                 console.log("clicked", slug);
                 details(slug);
