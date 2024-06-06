@@ -38,7 +38,7 @@ h1,p{
     text-align: center;
     word-wrap: break-word;
 }
-#buy 
+#buy ,#close
 {
     margin-left: 50%;
     margin-top: 50px;
@@ -55,7 +55,7 @@ h1,p{
 #img-sec{
     margin-left: 15%;
 }
-@media (max-width:480px) {
+@media (max-width:768px) {
     #img-sec{
         display: flex;
         flex-direction: column;
@@ -64,9 +64,10 @@ h1,p{
 #section-1
 {
     margin-top: 400px;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
-   
+    border: 2px solid black;
+   position: relative;
 }
 .search-sec{
     margin-left: 38%;
@@ -106,6 +107,7 @@ h1,p{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    
 
 }
 .card-Search{
@@ -113,15 +115,42 @@ h1,p{
     margin-top: 20px;
     width: 40%;
 }
-.details-card{
-    overflow: scroll;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-    position: relative;
-    transform: translate(50% , -50%);
-    z-index: 1;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .details-card {
     border: 1px solid red;
-    height: 50vh;
-    width: 40vw;
-}
+    width: 30vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #5edbcf;
+    display: none;
+  }
+  
+  .details-card img {
+    max-width: 100%;
+    height: auto;
+  }
+  .details-card img{
+    margin-top: 5%;
+    margin-left: 35%;
+  }
+  p  {
+    text-align: center;
+    word-wrap: break-word; 
+    white-space: normal;
+    overflow-wrap: break-word;
+    max-width: 90%; 
+    margin: 10px 0; 
+  }
